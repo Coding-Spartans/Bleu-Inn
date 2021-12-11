@@ -314,22 +314,11 @@ body {
 /* left svg anim  */
 
 .overlapping-text-welcome {
-  text-align: center;
-  animation: logo 1s 0.6s cubic-bezier(0.575, 0.005, 0.285, 1.005);
-  color: black;
-  font-family: "Playball", cursive;
-  margin-top: 4.4em;
+  font-size: 6.3em;
 }
-.overlapping-text-welcome {
-  font-size: 6.7em;
-  opacity: 0.6;
-  transition: all 0.7s cubic-bezier(0.18, 0.9, 0.24, 0.91);
-  margin-bottom: 0vw;
-  font-family: "Nanum Myeongjo", serif;
-  z-index: 1;
-  color: #c4a159;
+.car {
+  max-width: 20.5em;
 }
-
 /* footer starts  */
 footer {
   text-align: center;
@@ -383,6 +372,7 @@ footer .contact-bottom-border {
 }
 .r {
   font-family: "Great Vibes", cursive;
+  margin-top: 10em;
 }
 .c1 {
   float: left;
@@ -418,6 +408,7 @@ footer .contact-bottom-border {
     rgb(0 0 0 / 14%) 0px 1px 1px 0px, rgb(0 0 0 / 12%) 0px 1px 3px 0px;
   width: 50vw;
   height: 70vh;
+  object-fit: cover;
 }
 .rtop {
   padding-top: 5vh;
@@ -479,9 +470,12 @@ footer .contact-bottom-border {
   animation: sup ease 1s 0.6s forwards;
 }
 .carousel__viewport {
-  left: -52vw;
+  left: -40vw;
+  margin-right: 2vw;
 }
-
+.car-container:hover .overlapping-text-welcome {
+  letter-spacing: normal;
+}
 .carousel__slide:nth-child(1) {
   background: url("../images/bg12.jpg");
   background-size: cover;
@@ -502,9 +496,7 @@ footer .contact-bottom-border {
   background-size: cover;
   background-repeat: no-repeat;
 }
-.car {
-  margin-bottom: 20vh;
-}
+
 .i {
   width: 30vw;
   height: 50vh;
@@ -634,6 +626,12 @@ footer {
 .b:hover .suit-bottom-bar {
   width: 40%;
 }
+.b a:link,
+.b a:visited,
+.b a:active,
+.b a {
+  text-decoration: none;
+}
 .verna {
   background-image: url("../images/bg33.jpeg");
   background-size: cover;
@@ -645,6 +643,75 @@ footer {
 .grandtour {
   background-image: url("../images/bg32.png");
   background-size: cover;
+}
+.hero-image div {
+  color: #c4a159;
+  letter-spacing: 0.2vw;
+}
+.grand .carousel__slide:nth-child(1) {
+  background: url("images/bg39.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.grand .carousel__slide:nth-child(2) {
+  background: url("images/bg36.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.grand .carousel__slide:nth-child(3) {
+  background: url("images/bg40.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.grand .carousel__slide:nth-child(4) {
+  background: url("images/bg38.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.camel .carousel__slide:nth-child(1) {
+  background: url("images/bg41.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.camel .carousel__slide:nth-child(2) {
+  background: url("images/bg42.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.camel .carousel__slide:nth-child(3) {
+  background: url("images/bg43.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.camel .carousel__slide:nth-child(4) {
+  background: url("images/bg44.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+/* .donate {
+  clear: both;
+  background-image: url("images/bg5.jpg");
+  height: 120vh;
+  padding-top: 14vh;
+}
+.donate-header {
+  background: #5fc6ddf5;
+  margin-top: -30em;
+}
+.pay-now-button button {
+  background: none;
+} */
+.amb {
+  font-family: "EB Garamond";
+  padding-top: 7vh;
+  color: #c4a159;
+  background: blanchedalmond;
+}
+.amb1 {
+  padding-top: 10vh;
+}
+.amb3 img {
+  margin-top: -24vh;
 }
 @media (min-width: 1400px) {
   .c1 {
@@ -760,4 +827,73 @@ input:focus ~ label {
   font-family: "Great Vibes", cursive;
   margin-left: -1em;
   opacity: 0.9;
+}
+.booknow-button-border-middle > div {
+  width: 0.9px;
+}
+.room-services-block {
+  display: flex;
+  margin-bottom: 5em;
+  background: beige;
+  position: relative;
+  justify-content: space-between;
+  height: 85vh;
+  align-items: center;
+}
+
+.room-services-block:before {
+  content: " ";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.2;
+  /* background-image: url("../images/web-background.jpg"); */
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  background-size: cover;
+}
+
+.room-services-block-desc {
+  font-size: 2em;
+  z-index: 1;
+  display: flex;
+  background: top;
+  justify-content: flex-end;
+  align-items: center;
+  height: 100%;
+  width: 65%;
+  background-repeat: no-repeat;
+  background-size: 26em;
+  background-image: url("../images/bg45.jpg");
+}
+
+.room-services-block-desc div {
+  color: rgb(57, 57, 58);
+  text-align: right;
+  padding: 1em 1em;
+  font-size: 1.5em;
+  width: 70%;
+  background: white;
+  font-family: "Great Vibes", cursive;
+}
+.room-services-block-desc h1 {
+  font-size: 1.3em;
+  margin: 0;
+  text-align: center;
+}
+.room-services-header {
+  z-index: 1;
+  font-size: 2em;
+  width: 35%;
+  padding: 1em;
+  text-align: center;
+  font-family: "EB Garamond", serif;
+  color: rgb(57, 57, 58);
+}
+.room-services-header div:hover {
+  transform: scale(1.3);
+  transition: transform cubic-bezier(0.075, 0.82, 0.165, 1) 1s;
 }

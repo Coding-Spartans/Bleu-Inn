@@ -88,13 +88,17 @@ body {
   margin-top: 3em;
 }
 
-.nav-item {
+.nav-item,
+.nav-item a:link,
+.nav-item a:visited {
   padding: 9px 0 9px 0;
+  color: black;
   text-align: center;
   width: 100%;
   font-family: "EB Garamond", serif;
   transition: background-color ease-in-out 0.1s;
   font-size: 18px;
+  text-decoration: none;
 }
 
 .nav-item:hover {
