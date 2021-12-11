@@ -36,8 +36,8 @@ input:focus {
 body {
   margin: 0;
   font-family: "Eb Garamond ", sans-serif;
-  animation: nav-item 0.3s 0.1s cubic-bezier(0.575, 0.005, 0.285, 1.005)
-    forwards;
+  animation: nav-item 1s ease forwards;
+  opacity: 0;
   overflow: hidden;
 }
 
@@ -405,6 +405,7 @@ footer .contact-bottom-border {
   color: white;
   font-family: "Gwendolyn", cursive;
   font-size: 1.5em;
+
   background-color: #48abc1;
   text-align: right;
   margin: 0;
@@ -413,6 +414,8 @@ footer .contact-bottom-border {
   margin-right: 40vw;
   margin-top: -50vh;
   z-index: 5;
+  box-shadow: rgb(0 0 0 / 20%) 0px 2px 1px -1px,
+    rgb(0 0 0 / 14%) 0px 1px 1px 0px, rgb(0 0 0 / 12%) 0px 1px 3px 0px;
   width: 50vw;
   height: 70vh;
 }
@@ -435,23 +438,31 @@ footer .contact-bottom-border {
   background: #c4a159;
   align-self: flex-end;
   margin-left: 0.4em;
-  transition: all cubic-bezier(0, 0, 0.12, 1.03) 1s;
+  animation: sup-side-bar ease 1s 0.6s forwards;
 }
 .sup-bottom-bar {
   width: 3px;
   height: 3px;
   align-self: flex-end;
   background: #c4a159;
-  transition: all cubic-bezier(0, 0, 0.12, 1.03) 1s;
+  animation: sup-bottom-bar ease 1s 0.6s forwards;
 }
-.r:hover .sup {
-  right: 13vw;
+@keyframes sup-bottom-bar {
+  100% {
+    width: 100%;
+  }
 }
-.r:hover .sup-side-bar {
-  height: 40px;
+
+@keyframes sup-side-bar {
+  100% {
+    height: 40px;
+  }
 }
-.r:hover .sup-bottom-bar {
-  width: 100%;
+
+@keyframes sup {
+  100% {
+    right: 13vw;
+  }
 }
 
 .sup {
@@ -465,7 +476,7 @@ footer .contact-bottom-border {
   font-size: 2em;
   font-weight: 10px;
   letter-spacing: 0.1vw;
-  transition: all cubic-bezier(0, 0, 0.12, 1.03) 1s;
+  animation: sup ease 1s 0.6s forwards;
 }
 .carousel__viewport {
   left: -52vw;
@@ -525,6 +536,8 @@ footer {
 }
 .gallery {
   position: relative;
+  height: 90em;
+  margin-top: 30em;
 }
 .i1 {
   background: url("../images/bg31.jpg");
@@ -637,4 +650,114 @@ footer {
   .c1 {
     padding-top: 14vh;
   }
+}
+.form {
+  background-color: #cbe7ff;
+  width: 61%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 3em 2em 2em 7em;
+}
+
+.input {
+  display: flex;
+  align-items: baseline;
+  margin: 3em 0 2em 0;
+}
+input:focus + .input-border div {
+  width: 100%;
+}
+input:focus ~ label {
+  color: goldenrod;
+}
+.input label {
+  width: 4em;
+  color: #000000a1;
+  font-size: 1.6em;
+  padding: 0;
+  font-family: "EB Garamond";
+}
+.input-box input {
+  width: 100%;
+  font-family: "EB Garamond";
+  border: 0;
+  background-color: #cbe7ff;
+  padding: 0;
+  font-size: 1.6em;
+  color: #000000a1;
+}
+.input-box {
+  width: 83%;
+}
+.input-box input::placeholder {
+  color: #000000a1;
+}
+.input-border {
+  height: 1.6px;
+  display: flex;
+  justify-content: center;
+  background-color: white;
+}
+.input-border div {
+  height: 1.6px;
+  background-color: #000000a1;
+  width: 0%;
+  transition: width cubic-bezier(0.575, 0.005, 0.285, 1.005) 0.5s;
+}
+.pay-now-button {
+  display: flex;
+  justify-content: center;
+  font-family: "EB Garamond";
+  align-items: center;
+  margin-top: 5em;
+}
+.pay-now-button button {
+  border: 0px solid black;
+  box-shadow: rgb(0 0 0 / 20%) 0px 2px 1px -1px,
+    rgb(0 0 0 / 14%) 0px 1px 1px 0px, rgb(0 0 0 / 12%) 0px 1px 3px 0px;
+  border-radius: 2px;
+  background: white;
+  padding: 12px 18px;
+  font-family: "EB Garamond";
+  font-size: 18px;
+}
+.pay-now-button .button-overlay {
+  width: 100%;
+  top: -48px;
+  height: 48px;
+  position: relative;
+  margin-left: 0;
+}
+.book-suite {
+  padding-left: 5vw;
+  padding-right: 5vw;
+  padding-top: 5vh;
+  margin-top: 5em;
+  padding-bottom: 5vh;
+  height: 95vh;
+  align-items: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: flex-end;
+  background-image: url("../images/bg5.jpg");
+  margin-bottom: 2em;
+}
+.book-suite-header {
+  width: 26em;
+  z-index: 1;
+  height: 16em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: -5em;
+  background: #5fc6ddf5;
+}
+.book-suite-header div {
+  color: white;
+  font-size: 4em;
+  font-family: "Great Vibes", cursive;
+  margin-left: -1em;
+  opacity: 0.9;
 }
