@@ -834,7 +834,7 @@ input:focus ~ label {
 .room-services-block {
   display: flex;
   margin-bottom: 5em;
-  background: beige;
+  background: floralwhite;
   position: relative;
   justify-content: space-between;
   height: 85vh;
