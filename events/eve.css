@@ -272,3 +272,19 @@ button {
 .pay-now-button button {
   font-style: italic;
 }
+.nav-item,
+.nav-item a:link,
+.nav-item a:visited {
+  padding: 9px 0 9px 0;
+  color: black;
+  text-align: center;
+  width: 100%;
+  font-family: "EB Garamond", serif;
+  transition: background-color ease-in-out 0.1s;
+  font-size: 18px;
+  text-decoration: none;
+}
+
+.active {
+  color: #c4a159 !important;
+}
